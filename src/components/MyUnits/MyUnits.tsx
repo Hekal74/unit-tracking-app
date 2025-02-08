@@ -123,10 +123,8 @@ const UnitCard: React.FC<UnitCardProps> = ({
 }) => {
   return (
     <div className="relative flex bg-white shadow-md rounded-lg overflow-hidden mb-4">
-      {/* صورة الوحدة */}
       <img src={image} alt={title} className="w-1/3 rounded-lg object-cover" />
 
-      {/* تفاصيل الوحدة */}
       <div className="flex flex-col justify-between p-4 w-2/3">
         <div>
           <h2 className="text-xl font-bold">{title}</h2>
@@ -141,7 +139,7 @@ const UnitCard: React.FC<UnitCardProps> = ({
           <span className={`px-2 py-1 rounded text-white ${status === 'Approved' ? 'bg-green-500' : status === 'Pending' ? 'bg-yellow-500' : status === 'Reserved' ? 'bg-blue-500' : 'bg-red-500'}`}>
             {status}
           </span>
-          <span style={{color:"#f27a7a"}} className=" text-xl font-bold mr-10">{price} EGP</span>
+          <span style={{ color: "#f27a7a" }} className=" text-xl font-bold mr-10">{price} EGP</span>
         </div>
         <div className="flex justify-between items-center mt-4">
           <span className="text-gray-500">Added {dateAdded}</span>
@@ -149,7 +147,6 @@ const UnitCard: React.FC<UnitCardProps> = ({
         </div>
       </div>
 
-      {/* زر الحذف يمتد بطول الكارد */}
       <button
         onClick={onDelete}
         className="absolute top-0 right-0 h-full bg-red-500 text-white w-12 flex items-center justify-center hover:bg-red-600 transition"
