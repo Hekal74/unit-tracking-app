@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { Globe, Heart, ChevronDown } from "lucide-react";
 import { Link, useNavigate } from "react-router-dom";
+import madmonLogo from "../../assets/madmon-logo.png";
+import userAvatar from "../../assets/user.png";
 
 const Navbar = () => {
     const [isLangOpen, setIsLangOpen] = useState(false);
@@ -11,7 +13,7 @@ const Navbar = () => {
         <nav className="bg-white shadow-md px-6 py-3">
             <div className="max-w-7xl mx-auto flex items-center justify-between">
                 <div className="flex items-center space-x-2">
-                    <img src="/assets/madmon-logo.png" alt="madmon logo" className="h-14" />
+                    <img src={madmonLogo} alt="madmon logo" className="h-14" />
                 </div>
 
                 <div className="flex gap-4">
@@ -63,7 +65,7 @@ const Navbar = () => {
                             onClick={() => setIsUserOpen(!isUserOpen)}
                         >
                             <img
-                                src="/assets/user.png"
+                                src={userAvatar}
                                 alt="User Avatar"
                                 className="w-8 h-8 rounded-full"
                             />

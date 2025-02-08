@@ -1,12 +1,18 @@
 import { MapPin, Phone, Mail } from "lucide-react";
 import { Link } from "react-router-dom";
+import madmonLogo from "../../assets/logo.png";
+import facbookLogo from "../../assets/facebook-logo.png";
+import instaLogo from "../../assets/insta-logo.png";
+import linkedinLogo from "../../assets/linked-logo.png";
+
+
 
 const Footer = () => {
   return (
     <footer className="bg-blue-700 text-white py-10 px-6 w-full">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8">
         <div className="flex justify-center md:justify-start">
-          <img src="/assets/logo.png" alt="madmon logo" className="h-40 w-40" />
+          <img src={madmonLogo} alt="madmon logo" className="h-40 w-40" />
         </div>
 
         <div className="hidden md:block w-px h-40 bg-amber-500"></div>
@@ -54,13 +60,13 @@ const Footer = () => {
         <div className="text-center">
           <div className="flex justify-center space-x-4">
             <a href="https://www.linkedin.com">
-              <img src="/assets/linked-logo.png" alt="LinkedIn" className="w-6 h-6 cursor-pointer" />
+              <img src={linkedinLogo} alt="LinkedIn" className="w-6 h-6 cursor-pointer" />
             </a>
             <a href="https://www.instagram.com">
-              <img src="/assets/insta-logo.png" alt="Instagram" className="w-6 h-6 cursor-pointer" />
+              <img src={instaLogo} alt="Instagram" className="w-6 h-6 cursor-pointer" />
             </a>
             <a href="https://www.facebook.com">
-              <img src="/assets/facebook-logo.png" alt="Facebook" className="w-6 h-6 cursor-pointer" />
+              <img src={facbookLogo} alt="Facebook" className="w-6 h-6 cursor-pointer" />
             </a>
           </div>
         </div>

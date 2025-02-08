@@ -2,6 +2,10 @@ import { useState } from "react";
 import { FaTrash } from "react-icons/fa";
 import Footer from "../Footer/Footer";
 import SideBar from "../SideBar/SideBar";
+import houseOne from "../../assets/house-1.png";
+import houseTwo from "../../assets/house-2.png";
+import houseThree from "../../assets/house-3.png";
+import houseFour from "../../assets/house-4.png";
 
 interface Unit {
   status: string;
@@ -20,7 +24,7 @@ const MyUnits: React.FC = () => {
   const [units, setUnits] = useState<Unit[]>([
     {
       status: "Approved",
-      image: "/public/assets/house-1.png",
+      image: houseOne,  
       title: "Grand House Real Estate",
       location: "New Cairo, Egypt",
       rooms: 6,
@@ -32,7 +36,7 @@ const MyUnits: React.FC = () => {
     },
     {
       status: "Pending",
-      image: "/public/assets/house-2.png",
+      image: houseTwo,  
       title: "Grand House Real Estate",
       location: "New Cairo, Egypt",
       rooms: 6,
@@ -44,7 +48,7 @@ const MyUnits: React.FC = () => {
     },
     {
       status: "Reserved",
-      image: "/public/assets/house-3.png",
+      image: houseThree,  
       title: "Grand House Real Estate",
       location: "New Cairo, Egypt",
       rooms: 6,
@@ -56,7 +60,7 @@ const MyUnits: React.FC = () => {
     },
     {
       status: "Rejected",
-      image: "/public/assets/house-4.png",
+      image: houseFour, 
       title: "Grand House Real Estate",
       location: "New Cairo, Egypt",
       rooms: 6,
@@ -67,6 +71,7 @@ const MyUnits: React.FC = () => {
       actionText: "Edit",
     },
   ]);
+  
 
   const handleDelete = (index: number) => {
     setUnits(units.filter((_, i) => i !== index));
@@ -74,7 +79,6 @@ const MyUnits: React.FC = () => {
 
   return (
     <>
-      {/* تغيير اتجاه Flex لتكون عمودية على الشاشات الصغيرة وأفقية (row) على الشاشات المتوسطة والكبيرة */}
       <div className="container mx-auto flex flex-col md:flex-row">
         <SideBar />
         <div className="p-4 ml-0 md:ml-8 scrollbar-hide flex-1">
